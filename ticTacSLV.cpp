@@ -181,6 +181,8 @@ void Board::start()
         }
     }
     printBoard();
+    turn = turn == 'X' ? 'O' : 'X'; 
+    cout << "congragulations " << turn << endl;
 }
 
 int main()
