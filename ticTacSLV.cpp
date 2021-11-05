@@ -48,7 +48,6 @@ int Board::makeMove()
             key.push_back(board[i][j]);
         }
     }
-    //cout << key << endl;
     if (memo[key]) return memo[key];
 
     int winX = checkWin('X');
@@ -97,7 +96,7 @@ int Board::makeMove()
 
 int Board::placeMoveCPU()
 {
-    turn == 'O';
+    turn = 'O';
     int best = 0;
     int temp;
     int besti, bestj;
@@ -182,7 +181,7 @@ void Board::start()
     }
     printBoard();
     turn = turn == 'X' ? 'O' : 'X'; 
-    cout << "congragulations " << turn << endl;
+    cout << "game over"<< endl;
 }
 
 int main()
