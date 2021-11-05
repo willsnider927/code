@@ -10,7 +10,7 @@ void Board::createBoard()
 
 int Board::checkWin(char check)
 {
-    bool tie, winR0, winR1, winR2, winC0, winC1, winC2, diag1, diag2 = true;
+    bool tie = true, winR0 = true, winR1 = true, winR2 = true, winC0 = true, winC1 = true, winC2 = true, diag1 = true, diag2 = true;
     for (int i = 0; i < 3; i++)
     {
         if (board[0][i] == '.')  tie = false;
