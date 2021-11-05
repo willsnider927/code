@@ -25,9 +25,7 @@ int Board::checkWin(char check)
         if (board[i][i] != check) diag1 = false;
         if (board[i][2 - i] != check) diag2 = false;
     }
-    if (winR0 || winR1 || winR2 || winC0 || winC1 || winC2 || diag1 || diag2) return 3;
-    if (tie) return 2;
-    return 1;
+    return ((winR0 || winR1 || winR2 || winC0 || winC1 || winC2 || diag1 || diag2)*3) | 2*(tie) | 1;
 }
 
 int Board::makeMove()
